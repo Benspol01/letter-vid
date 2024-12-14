@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css" />
+  </head>
+  <body>
+    <!-- Background video -->
+    <video autoplay loop id="background-video">
+      <source src="BABE.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Volume control -->
+    <div class="volume-control">
+      <label for="volume-control">Volume: </label>
+      <input
+        type="range"
+        id="volume-control"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.2"
+      />
+    </div>
+
+    <!-- Content on top of the video -->
+    <section class="animation-box">
+      <div class="first-text">
+        Hi baby, I just wanted to say I'm sorry for the times I was being a bit silly and not the best boyfriend I could be. 
+      </div>
+      <div class="second-text">
+        I hope that you're having a wonderful day, as you always deserve to, and I apologize for my stubbornness at times.
+      </div>
+      <div class="third-text"> I love you so much, more than words can express, and I'm truly thankful for you being in my life.</div>
+      <div class="fourth-text">
+        Let’s hit the reset button and make up for the moments we didn’t get to properly celebrate together.
+      </div>
+      <div class="fifth-text">
+        God knows just how deeply I love you, and I will do everything I can to show you that you are worth every effort.
+      </div>
+    </section>
+
+    <script>
+      // Get the video element and the volume control slider
+      const video = document.getElementById("background-video");
+      const volumeControl = document.getElementById("volume-control");
+
+      // Set the initial volume
+      video.volume = volumeControl.value;
+
+      // Update the video volume when the slider is changed
+      volumeControl.addEventListener("input", (event) => {
+        video.volume = event.target.value;
+      });
+    </script>
+  </body>
+</html

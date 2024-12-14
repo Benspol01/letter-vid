@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #e4fde1;
+  margin: 0;
+}
+.envelope {
+  position: relative;
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.back {
+  position: relative;
+  width: 350px;
+  height: 280px;
+  background: #90cf8e;
+}
+.front {
+  position: absolute;
+  border-right: 180px solid #c6edc3;
+  border-top: 140px solid transparent;
+  border-bottom: 140px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 170px;
+  z-index: 3;
+}
+.front::before {
+  content: "";
+  position: absolute;
+  border-left: 180px solid #c6edc3;
+  border-top: 140px solid transparent;
+  border-bottom: 140px solid transparent;
+  height: 0;
+  width: 0;
+  top: -140px;
+  left: -170px;
+}
+.front::after {
+  content: "";
+  position: absolute;
+  border-bottom: 145px solid #a7dca5;
+  border-left: 175px solid transparent;
+  border-right: 175px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -170px;
+}
+.top {
+  position: absolute;
+  border-top: 145px solid #90cf8e;
+  border-left: 175px solid transparent;
+  border-right: 175px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition: 0.4s;
+}
+.envelope:hover .top {
+  transform: rotateX(160deg);
+}
+.letter {
+  position: absolute;
+  background: white;
+  width: 330px;
+  height: 260px;
+  top: 10px;
+  left: 10px;
+  transition: 0.2s;
+}
+.envelope:hover .letter {
+  transform: translateY(-120px);
+  z-index: 2;
+}
+.text1 {
+  position: absolute;
+  color: black;
+  top: -50%;
+}
+.text {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Cedarville Cursive", cursive;
+  margin-top: 20px;
+  font-weight: normal;
+  color: black;
+  position: relative;
+  top: -20px;
+  bottom: 20px;
+}
+
+.heart {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding 0.6s linear infinite;
+}
+.heart1 {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding1 0.6s linear infinite;
+}
+@keyframes untoldcoding {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.08);
+  }
+}
+@keyframes untoldcoding1 {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.08);
+  }
+}
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  top: -50px;
+  border-radius: 50px;
+}
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  right: -50px;
+  border-radius: 50px;
+}
+.heart1:before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  top: -50px;
+  border-radius: 50px;
+}
+.heart1:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  right: -50px;
+  border-radius: 50px;
+}
+.envelope p#natoy {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: bold;
+  font-size: 15px;
+  align-items: center;
+}
+.envelope #q1 a {
+  display: inline-block;
+  color: #6247aa;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 10; /* Make sure the link appears above other elements */
+  position: relative;
+}
